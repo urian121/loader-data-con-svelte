@@ -1,17 +1,8 @@
 # 📌 Guía: Cargar Datos con Loader en Svelte
 
-## 1. Crear la estructura del proyecto
-Asegúrete de que tu proyecto de Svelte está configurado. Si no lo tienes, puedes crearlo con:
+La carga de datos en **Svelte** se puede gestionar de manera eficiente con los loaders, facilitando la obtención de información desde APIs o bases de datos antes de renderizar un componente. En esta guía, exploraremos cómo usar loaders en Svelte para manejar datos asincrónicos de forma óptima.
 
-```sh
-npx degit sveltejs/template svelte-api-loader
-cd svelte-api-loader
-npm install
-```
-
----
-
-## 2. Crear el store `loader.js`
+## 1. Crear el store `loader.js`
 Vamos a crear un store para manejar el estado del loader.
 
 📁 Crea el archivo `src/stores/loader.js` y agrega:
@@ -23,9 +14,8 @@ import { writable } from "svelte";
 export const loader = writable(false);
 ```
 
----
 
-## 3. Crear el servicio para consumir la API
+## 2. Crear el servicio para consumir la API
 Para mantener el código limpio, crearemos un servicio que se encargue de hacer la petición a la API.
 
 📁 Crea el archivo `src/services/apiService.js` y agrega:
@@ -52,9 +42,7 @@ export async function fetchUsers() {
 }
 ```
 
----
-
-## 4. Crear el componente `Usuarios.svelte`
+## 3. Crear el componente `Usuarios.svelte`
 Ahora, creamos un componente para mostrar los datos.
 
 📁 Crea el archivo `src/components/Usuarios.svelte` y agrega:
@@ -102,9 +90,8 @@ Ahora, creamos un componente para mostrar los datos.
 {/if}
 ```
 
----
 
-## 5. Crear el componente `Spinner.svelte`
+## 4. Crear el componente `Spinner.svelte`
 Para que el loader se vea bien, creamos un componente de spinner.
 
 📁 Crea el archivo `src/components/Spinner.svelte` y agrega:
@@ -132,9 +119,8 @@ Para que el loader se vea bien, creamos un componente de spinner.
 </div>
 ```
 
----
 
-## 6. Integrar todo en `App.svelte`
+## 5. Integrar todo en `App.svelte`
 Finalmente, modificamos el archivo principal para mostrar los usuarios.
 
 📁 Edita el archivo `src/App.svelte` y agrega:
@@ -153,9 +139,8 @@ Finalmente, modificamos el archivo principal para mostrar los usuarios.
 </div>
 ```
 
----
 
-## 7. Ejecutar el proyecto
+## 6. Ejecutar el proyecto
 Guarda los archivos y ejecuta el servidor:
 
 ```sh
@@ -167,3 +152,17 @@ Abre en el navegador `http://localhost:5173`, y verás lo siguiente:
 ✅ Un spinner de carga mientras se obtienen los datos.
 ✅ Cuando la API responde, se muestra la tabla con los usuarios.
 
+
+## 🙌 Cómo puedes apoyar 📢:
+
+✨ **Comparte este proyecto** con otros desarrolladores para que puedan beneficiarse.
+
+☕ **Invítame un café o una cerveza 🍺**:
+   - [Paypal](https://www.paypal.me/iamdeveloper86) (`iamdeveloper86@gmail.com`).
+
+### ⚡ ¡No olvides SUSCRIBIRTE a la [Comunidad WebDeveloper](https://www.youtube.com/WebDeveloperUrianViera?sub_confirmation=1)!
+
+
+#### ⭐ **Déjanos una estrella en GitHub**:
+   - Dicen que trae buena suerte 🍀.
+**Gracias por tu apoyo 🤓.**

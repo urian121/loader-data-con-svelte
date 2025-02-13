@@ -1,7 +1,6 @@
 <script>
+  // Importamos Bootstrap
   import "bootstrap/dist/css/bootstrap.min.css";
-  import "bootstrap-icons/font/bootstrap-icons.css";
-
   import Usuarios from "./components/Usuarios.svelte";
 </script>
 
